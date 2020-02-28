@@ -1,0 +1,14 @@
+.btn {
+  width: auto;
+  height: 34px;
+  padding: 5px 15px 5px 15px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: $shadow;
+  cursor: pointer;
+}
+.btn-search {
+  color: $white;
+  background-color: black;
+  border-radius: 0 3px 3px 0;
+}

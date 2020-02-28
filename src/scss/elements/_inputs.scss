@@ -1,0 +1,12 @@
+input.principal-search {
+  width: 250px;
+  height: 32px;
+  border-radius: 3px 0 0 3px;
+  border: none;
+  text-indent: 10px;
+  color: $grey;
+  transition: 0.3s;
+  &:focus {
+    width: 400px;
+  }
+}
