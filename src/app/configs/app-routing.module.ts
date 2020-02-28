@@ -6,14 +6,12 @@ const appRoutes: Routes = [
   {
     path: "",
     component: SearchComponent,
-    data: { title: "Search" },
-    children: [
-      {
-        path: ":id",
-        component: SearchComponent,
-        data: { title: "{{id}}" }
-      }
-    ]
+    data: { title: "Search" }
+  },
+  {
+    path: ":category",
+    component: SearchComponent,
+    data: { title: "{{ category }}" }
   }
 ];
 

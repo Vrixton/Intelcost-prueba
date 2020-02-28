@@ -1,6 +1,15 @@
 <div class="toolbar">
-    <h3>Pixabay images</h3>
+    <h3>{{ category || 'pixbay images' }}</h3>
 </div>
 <div class="list-images-container">
-    <app-image-card *ngFor="let n of [1,2,3,4,5,6,7,8,9,10]"></app-image-card>
+    <app-image-card *ngFor="let image of images" [image]="image"></app-image-card>
+</div>
+<div class="container-pagination">
+    <button class="btn btn-pagination" (click)="getResults(page-1, category) ">
+        <i class="material-icons">navigate_before</i>
+    </button>
+    <div class="page-indicator">Page {{ page }}</div>
+    <button class="btn btn-pagination" (click)="getResults(page+1, category) ">
+        <i class="material-icons">navigate_next</i>
+    </button>
 </div>

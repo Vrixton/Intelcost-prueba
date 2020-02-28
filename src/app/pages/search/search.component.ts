@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
 import { ImagesService } from "../../services/images/images.service";
 @Component({
   selector: "app-search",
@@ -6,11 +7,17 @@ import { ImagesService } from "../../services/images/images.service";
   styleUrls: ["./search.component.scss"]
 })
 export class SearchComponent implements OnInit {
-  constructor(private imagesService: ImagesService) {}
+  category: string = "";
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private imagesService: ImagesService
+  ) {}
 
   ngOnInit() {
-    this.imagesService.get().subscribe(response => {
-      console.log(response);
+    this.activatedRoute.params.subscribe(params => {
+      if (params.category) {
+        this.category = params.category;
+      }
     });
   }
 }

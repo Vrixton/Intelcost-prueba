@@ -11,7 +11,7 @@ export class ImagesService {
 
   constructor(private http: HttpClient) {}
 
-  get(): Observable<any> {
-    return this.http.get(url);
+  get(page, category): Observable<any> {
+    return this.http.get(url + "&page=" + page + "&category=" + category);
   }
 }

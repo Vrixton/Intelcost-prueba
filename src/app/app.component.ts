@@ -8,7 +8,5 @@ import { ActivatedRoute, Router } from "@angular/router";
 })
 export class AppComponent {
   title = "Intelcost-prueba";
-  constructor(private router: Router) {
-    this.router.navigate(["/"]);
-  }
+  constructor(private router: Router) {}
 }
