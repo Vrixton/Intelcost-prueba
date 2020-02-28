@@ -42,7 +42,6 @@ export class ImageListComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log("aqui debe hacer el peo");
     if (changes.textSearch) {
       this.getResults(this.page, this.category, this.textSearch);
     }

@@ -24,7 +24,6 @@ export class SearchComponent implements OnInit {
   }
 
   getRecordsByText(e): void {
-    console.log("entro aqui");
     this.textSearch = e;
   }
 }
