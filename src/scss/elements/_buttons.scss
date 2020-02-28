@@ -1,12 +1,16 @@
 .btn {
   width: auto;
   height: 34px;
-  padding: 5px 15px 5px 15px;
+  padding: 5px 10px 5px 10px;
   border: none;
   border-radius: 3px;
   box-shadow: $shadow;
   cursor: pointer;
+  &:disabled {
+    visibility: hidden;
+  }
 }
+
 .btn-search {
   color: $white;
   background-color: black;

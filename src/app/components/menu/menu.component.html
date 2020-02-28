@@ -1,26 +1,6 @@
 <ul class="menu flex justify-content-space-around">
-    <li class="item" routerLinkActive="active" routerLink="/science">
-        <span>Science</span>
-        <div class="baseline"></div>
-    </li>
-    <li class="item" routerLinkActive="active" routerLink="/education">
-        <span>Education</span>
-        <div class="baseline"></div>
-    </li>
-    <li class="item" routerLinkActive="active" routerLink="/people">
-        <span>People</span>
-        <div class="baseline"></div>
-    </li>
-    <li class="item" routerLinkActive="active" routerLink="/feelings">
-        <span>Feelings</span>
-        <div class="baseline"></div>
-    </li>
-    <li class="item" routerLinkActive="active" routerLink="/computer">
-        <span>Computer</span>
-        <div class="baseline"></div>
-    </li>
-    <li class="item" routerLinkActive="active" routerLink="/buildings">
-        <span>Buildings</span>
+    <li *ngFor="let category of categories" class="item" routerLinkActive="active" routerLink="/{{category.title}}">
+        <span>{{category.title}}</span>
         <div class="baseline"></div>
     </li>
 </ul>

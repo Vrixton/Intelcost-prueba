@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from "../app/configs/app-routing.module";
@@ -8,7 +9,8 @@ import { SearchComponent } from "./pages/search/search.component";
 import { SearchBarComponent } from "./components/search-bar/search-bar.component";
 import { MenuComponent } from "./components/menu/menu.component";
 import { ImageListComponent } from "./components/image-list/image-list.component";
-import { ImageCardComponent } from './components/image-card/image-card.component';
+import { ImageCardComponent } from "./components/image-card/image-card.component";
+import { LoaderComponent } from "./components/loader/loader.component";
 
 @NgModule({
   declarations: [
@@ -17,9 +19,10 @@ import { ImageCardComponent } from './components/image-card/image-card.component
     SearchBarComponent,
     MenuComponent,
     ImageListComponent,
-    ImageCardComponent
+    ImageCardComponent,
+    LoaderComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -5,11 +5,11 @@
     <app-image-card *ngFor="let image of images" [image]="image"></app-image-card>
 </div>
 <div class="container-pagination">
-    <button class="btn btn-pagination" (click)="getResults(page-1, category) ">
+    <button class="btn btn-pagination" (click)="getResults(page-1, category, textSearch)" [disabled]="page === 1">
         <i class="material-icons">navigate_before</i>
     </button>
     <div class="page-indicator">Page {{ page }}</div>
-    <button class="btn btn-pagination" (click)="getResults(page+1, category) ">
+    <button class="btn btn-pagination" (click)="getResults(page+1, category, textSearch)" [disabled]="page === maxPage">
         <i class="material-icons">navigate_next</i>
     </button>
 </div>

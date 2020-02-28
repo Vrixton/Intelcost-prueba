@@ -1,4 +1,4 @@
 <div class="container-elements">
-    <input class="principal-search shadow" type="text" placeholder="Search">
-    <button class="btn btn-search"><i class="material-icons">search</i></button>
+    <input class="principal-search shadow" [(ngModel)]="searchText" type="text" maxlength="100" placeholder="Search">
+    <button class="btn btn-search" (click)="getRecords(searchText)"><i class="material-icons">search</i></button>
 </div>

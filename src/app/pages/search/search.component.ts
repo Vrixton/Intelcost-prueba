@@ -8,6 +8,8 @@ import { ImagesService } from "../../services/images/images.service";
 })
 export class SearchComponent implements OnInit {
   category: string = "";
+  textSearch: string = "";
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private imagesService: ImagesService
@@ -19,5 +21,10 @@ export class SearchComponent implements OnInit {
         this.category = params.category;
       }
     });
+  }
+
+  getRecordsByText(e): void {
+    console.log("entro aqui");
+    this.textSearch = e;
   }
 }
