@@ -4,6 +4,8 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
+import { NgbModalModule } from "@ng-bootstrap/ng-bootstrap";
+
 import { AppRoutingModule } from "../app/configs/app-routing.module";
 import { AppComponent } from "./app.component";
 import { SearchComponent } from "./pages/search/search.component";
@@ -13,6 +15,7 @@ import { ImageListComponent } from "./components/image-list/image-list.component
 import { ImageCardComponent } from "./components/image-card/image-card.component";
 import { LoaderComponent } from "./components/loader/loader.component";
 import { CarouselComponent } from "./components/carousel/carousel.component";
+import { PreviewImageComponent } from "./components/preview-image/preview-image.component";
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { CarouselComponent } from "./components/carousel/carousel.component";
     ImageListComponent,
     ImageCardComponent,
     LoaderComponent,
-    CarouselComponent
+    CarouselComponent,
+    PreviewImageComponent
   ],
   imports: [
     BrowserModule,

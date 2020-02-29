@@ -1,7 +1,8 @@
-<div class="image-card shadow">
+<div class="image-card shadow" (click)="openPreview()">
     <div class="background-image" [ngStyle]="{background: 'url(' + image.webformatURL + ')'}">
     </div>
     <div class="content">
         <i class="material-icons">zoom_out_map</i>
     </div>
 </div>
+<app-preview-image [image]="image" [isOpenModal]="IsOpenModal"></app-preview-image>

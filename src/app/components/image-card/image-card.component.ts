@@ -5,9 +5,12 @@ import { Component, Input, OnInit } from "@angular/core";
   templateUrl: "./image-card.component.html",
   styleUrls: ["./image-card.component.scss"]
 })
-export class ImageCardComponent implements OnInit {
-  @Input() image: boolean;
+export class ImageCardComponent {
+  @Input() image: any;
+  IsOpenModal: boolean = false;
   constructor() {}
 
-  ngOnInit() {}
+  openPreview() {
+    this.IsOpenModal = true;
+  }
 }
