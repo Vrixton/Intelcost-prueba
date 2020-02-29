@@ -10,6 +10,10 @@ export class SearchBarComponent {
   constructor() {}
 
   getRecords(text) {
-    this.activeTextSearch.emit(text);
+    if (text) {
+      this.activeTextSearch.emit(text);
+    } else {
+      this.activeTextSearch.emit("");
+    }
   }
 }

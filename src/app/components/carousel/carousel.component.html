@@ -1,0 +1,7 @@
+<ngb-carousel class="carousel" #carousel [interval]="interval" [pauseOnHover]="false" [showNavigationArrows]="false"
+    [showNavigationIndicators]="false">
+    <ng-template ngbSlide *ngFor="let img of images; index as i">
+        <div class="picsum-img-wrapper" [ngStyle]="{background: 'url(' + img.largeImageURL + ')'}">
+        </div>
+    </ng-template>
+</ngb-carousel>

@@ -1,6 +1,6 @@
 .btn {
   width: auto;
-  height: 34px;
+  height: 32px;
   padding: 5px 10px 5px 10px;
   border: none;
   border-radius: 3px;
@@ -13,10 +13,10 @@
 
 .btn-search {
   color: $white;
-  background-color: black;
+  background-color: $yellow;
   border-radius: 0 3px 3px 0;
 }
 .btn-pagination {
-  background-color: $black;
+  background-color: $yellow;
   color: $white;
 }

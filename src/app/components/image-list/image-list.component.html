@@ -1,10 +1,10 @@
 <div class="toolbar">
-    <h3>{{ category || 'pixbay images' }}</h3>
+    <h4>{{ category || 'pixbay images' }}</h4>
 </div>
 <div class="list-images-container">
     <app-image-card *ngFor="let image of images" [image]="image"></app-image-card>
 </div>
-<div class="container-pagination">
+<div class="container-pagination" *ngIf="images && images.length > 0">
     <button class="btn btn-pagination" (click)="getResults(page-1, category, textSearch)" [disabled]="page === 1">
         <i class="material-icons">navigate_before</i>
     </button>
@@ -12,4 +12,7 @@
     <button class="btn btn-pagination" (click)="getResults(page+1, category, textSearch)" [disabled]="page === maxPage">
         <i class="material-icons">navigate_next</i>
     </button>
+</div>
+<div class="container-message" *ngIf="images && images.length === 0">
+    <h5>No results found</h5>
 </div>

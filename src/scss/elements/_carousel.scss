@@ -1,0 +1,11 @@
+.carousel {
+  position: absolute;
+  width: 100%;
+  z-index: -1 !important;
+  .picsum-img-wrapper {
+    height: 350px;
+    background-repeat: no-repeat !important;
+    background-position: center;
+    background-size: cover !important;
+  }
+}

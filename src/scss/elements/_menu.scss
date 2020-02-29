@@ -14,7 +14,7 @@
       margin: 0 auto;
       margin-left: 60%;
       margin-top: 5px;
-      background-color: $black;
+      background-color: $yellow;
       transition: 0.3s;
     }
     &:hover {
@@ -22,7 +22,7 @@
     }
   }
   li.active {
-    color: $black;
+    color: $yellow;
     font-weight: bold;
     div.baseline {
       width: 120%;

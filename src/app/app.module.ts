@@ -1,7 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { AppRoutingModule } from "../app/configs/app-routing.module";
 import { AppComponent } from "./app.component";
@@ -11,6 +12,7 @@ import { MenuComponent } from "./components/menu/menu.component";
 import { ImageListComponent } from "./components/image-list/image-list.component";
 import { ImageCardComponent } from "./components/image-card/image-card.component";
 import { LoaderComponent } from "./components/loader/loader.component";
+import { CarouselComponent } from "./components/carousel/carousel.component";
 
 @NgModule({
   declarations: [
@@ -20,9 +22,16 @@ import { LoaderComponent } from "./components/loader/loader.component";
     MenuComponent,
     ImageListComponent,
     ImageCardComponent,
-    LoaderComponent
+    LoaderComponent,
+    CarouselComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    NgbModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
