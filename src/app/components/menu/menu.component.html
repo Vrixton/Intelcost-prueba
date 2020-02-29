@@ -1,4 +1,8 @@
-<ul class="menu flex justify-content-space-around">
+<button class="menu-button" (click)="menuOpen = !menuOpen">
+    <i *ngIf="!menuOpen" class="material-icons">menu</i>
+    <i *ngIf="menuOpen" class="material-icons text-white">close</i>
+</button>
+<ul [ngClass]="{'hidden': !menuOpen}" class="menu flex justify-content-space-around">
     <li *ngFor="let category of categories" class="item" routerLinkActive="active" routerLink="/{{category.title}}">
         <span>{{category.title}}</span>
         <div class="baseline"></div>
